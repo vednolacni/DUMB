@@ -2526,7 +2526,7 @@ def _call_ai_messages_result(
             raise HTTPException(
                 status_code=400, detail="OpenAI API key is not configured"
             )
-        selected_model = model or "gpt-4.1-mini"
+        selected_model = model or "gpt-6-luna"
         _reject_unavailable_model(provider, selected_model)
         response_input = _openai_response_input(messages)
         if not response_input:
