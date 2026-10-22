@@ -21,6 +21,7 @@ def _catalog(entries: list[tuple[str, str, str]]) -> dict[str, dict[str, str]]:
 
 GEMINI_MODEL_LIFECYCLE = _catalog(
     [
+        ("gemini-omni-flash-preview", "2026-10-22", "gemini-omni-1.1-flash"),
         ("gemini-3.1-flash-lite", "2027-05-07", "gemini-3.5-flash-lite"),
         (
             "gemini-3.1-flash-image-preview",
@@ -78,12 +79,12 @@ GEMINI_MODEL_LIFECYCLE = _catalog(
         (
             "gemini-2.0-flash-lite-preview",
             "2025-12-09",
-            "gemini-2.5-flash-lite",
+            "gemini-3.1-flash-lite",
         ),
         (
             "gemini-2.0-flash-lite-preview-02-05",
             "2025-12-09",
-            "gemini-2.5-flash-lite",
+            "gemini-3.1-flash-lite",
         ),
         (
             "gemini-robotics-er-1.5-preview",
@@ -96,6 +97,14 @@ GEMINI_MODEL_LIFECYCLE = _catalog(
 
 OPENAI_MODEL_LIFECYCLE = _catalog(
     [
+        ("gpt-5.1", "2027-04-01", "gpt-6-sol"),
+        ("gpt-5.3-codex", "2027-04-01", "gpt-6-sol"),
+        ("gpt-5.4-nano", "2027-04-01", "gpt-6-luna"),
+        ("gpt-4o-2024-08-06", "2027-01-14", "gpt-6-luna"),
+        ("gpt-4o-2024-11-20", "2027-01-14", "gpt-6-luna"),
+        ("gpt-4o-mini-2024-07-18", "2027-01-14", "gpt-6-luna"),
+        ("gpt-4.1-2025-04-14", "2027-01-14", "gpt-6-luna"),
+        ("gpt-4.1-mini-2025-04-14", "2027-01-14", "gpt-6-luna"),
         ("gpt-5-2025-08-07", "2026-12-11", "gpt-5.6-sol"),
         ("gpt-5-mini-2025-08-07", "2026-12-11", "gpt-5.6-terra"),
         ("gpt-5-nano-2025-08-07", "2026-12-11", "gpt-5.6-luna"),
@@ -148,8 +157,9 @@ OPENAI_MODEL_LIFECYCLE = _catalog(
 
 ANTHROPIC_MODEL_LIFECYCLE = _catalog(
     [
+        ("claude-sonnet-4-5-20250929", "2026-11-30", "claude-sonnet-5-5"),
         ("claude-opus-4-1-20250805", "2026-08-05", "claude-opus-4-8"),
-        ("claude-sonnet-4-20250514", "2026-06-15", "claude-sonnet-4-6"),
+        ("claude-sonnet-4-20250514", "2026-06-15", "claude-sonnet-5-5"),
         ("claude-opus-4-20250514", "2026-06-15", "claude-opus-4-8"),
         (
             "claude-3-haiku-20240307",
@@ -161,13 +171,13 @@ ANTHROPIC_MODEL_LIFECYCLE = _catalog(
             "2026-02-19",
             "claude-haiku-4-5-20251001",
         ),
-        ("claude-3-7-sonnet-20250219", "2026-02-19", "claude-sonnet-4-6"),
-        ("claude-3-5-sonnet-20240620", "2025-10-28", "claude-sonnet-4-6"),
-        ("claude-3-5-sonnet-20241022", "2025-10-28", "claude-sonnet-4-6"),
+        ("claude-3-7-sonnet-20250219", "2026-02-19", "claude-sonnet-5-5"),
+        ("claude-3-5-sonnet-20240620", "2025-10-28", "claude-sonnet-5-5"),
+        ("claude-3-5-sonnet-20241022", "2025-10-28", "claude-sonnet-5-5"),
         ("claude-3-opus-20240229", "2026-01-05", "claude-opus-4-8"),
         ("claude-2.0", "2025-07-21", "claude-opus-4-8"),
         ("claude-2.1", "2025-07-21", "claude-opus-4-8"),
-        ("claude-3-sonnet-20240229", "2025-07-21", "claude-sonnet-4-6"),
+        ("claude-3-sonnet-20240229", "2025-07-21", "claude-sonnet-5-5"),
         ("claude-1.0", "2024-11-06", "claude-haiku-4-5-20251001"),
         ("claude-1.1", "2024-11-06", "claude-haiku-4-5-20251001"),
         ("claude-1.2", "2024-11-06", "claude-haiku-4-5-20251001"),
