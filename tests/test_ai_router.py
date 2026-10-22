@@ -526,7 +526,7 @@ class AiRouterTests(unittest.TestCase):
             return_value={
                 "data": [
                     {"id": "text-embedding-3-small", "owned_by": "openai"},
-                    {"id": "gpt-5.3-codex", "owned_by": "openai"},
+                    {"id": "gpt-6-sol", "owned_by": "openai"},
                     {"id": "gpt-5-codex", "owned_by": "openai"},
                 ]
             },
@@ -535,7 +535,7 @@ class AiRouterTests(unittest.TestCase):
 
         self.assertEqual(
             [entry["name"] for entry in result["models"]],
-            ["gpt-5-codex", "gpt-5.3-codex", "text-embedding-3-small"],
+            ["gpt-5-codex", "gpt-6-sol", "text-embedding-3-small"],
         )
         retired, current, embedding = result["models"]
         self.assertEqual(retired["lifecycle"]["status"], "retired")
